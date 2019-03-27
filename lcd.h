@@ -1,4 +1,4 @@
-void lcd_cmd(unsigned char abc)
+void lcd_cmd(unsigned char abc)       
 {
 PORTC=abc;
 PORTC&=~(1<<0);
@@ -8,7 +8,7 @@ _delay_ms(1);
 PORTC&=~(1<<2);
 }
 
-void dis_cmd(unsigned char abc)
+void dis_cmd(unsigned char abc)     //address of the letter
 {
 unsigned char d=0;
 d=(abc&0b11110000);
